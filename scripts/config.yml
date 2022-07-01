@@ -1,0 +1,67 @@
+cuba:
+  - max_eval: 500000
+    n_start: 10000
+    relative_accuracy: 0.01
+  - max_eval: 2000000
+    n_start: 50000
+    relative_accuracy: 0.01
+  - max_eval: 10000000
+    n_start: 500000
+    relative_accuracy: 0.01
+
+tree:
+  name: Events
+
+slurm:
+  events_per_job        : 10
+  events_max_per_file   : 1000
+  sbatch_time           : "0-01:00:00"
+  sbatch_memPerCPU      : "2048"
+  sbatch_partition      : 'Def'
+  sbatch_qos            : 'normal'
+
+samples: 
+  DYJetsToLL_M-10to50:
+    params: {}
+    files: 
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_ElEl/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_ElMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_MuMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_ElEl/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_ElMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_MuMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_ElEl/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_ElMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_MuMu/results/DYJetsToLL_M-10to50.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+
+  TTTo2L2Nu:
+    params: {}
+    files: 
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_ElEl/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_ElMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved1B_MuMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_ElEl/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_ElMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Resolved2B_MuMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak4_b_TF','jet2_TF':'ak4_b_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_ElEl/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'e_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_ElMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'e_TF','lep2_TF':'mu_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+      - path: /nfs/scratch/fynu/fbury/SkimsMEM/Skim2018_Boosted1B_MuMu/results/TTTo2L2Nu.root
+        params: {'lep1_TF':'mu_TF','lep2_TF':'mu_TF','jet1_TF':'ak8_sub1_TF','jet2_TF':'ak8_sub1_TF'}
+
